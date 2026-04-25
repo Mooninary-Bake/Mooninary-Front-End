@@ -57,7 +57,7 @@ def call(config) {
 
             sh """
                 docker run -d --name ${containerName} \
-                -p ${config.testPort}:${config.testPort} ${imageTagged}
+                -p ${config.testPort}:${config.containerPort} ${imageTagged}
 
                 echo "Waiting for Nginx to be healthy..."
 
